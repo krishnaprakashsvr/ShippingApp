@@ -8,7 +8,7 @@ class Shipment extends Component {
       
     }
    
-  onSelectSender=(selectedSender)=>{
+  onselectsender=(selectedSender)=>{
     this.setState({sender:selectedSender});
   };
  
@@ -16,7 +16,7 @@ render() {
     return (  
       <div>
         <Sender seltdSender={this.props.location.selectedSender}
-         onChoose={this.onSelectSender}/>
+         onChoose={this.onselectsender}/>
       </div>
 );}
 }

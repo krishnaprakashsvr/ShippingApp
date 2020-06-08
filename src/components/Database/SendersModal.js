@@ -7,11 +7,11 @@ class SendersModal extends Component {
     constructor(props){
         super(props);
     }
-    OnSelectSender=(sender)=>{
+    onselectsender=(sender)=>{
         
-        if(this.props.senderOnSelect!=null)
+        if(this.props.senderonselect!=null)
          { 
-          this.props.senderOnSelect(sender);
+          this.props.senderonselect(sender);
          }
       };
     render() {
@@ -25,9 +25,9 @@ class SendersModal extends Component {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className='container'>
-                <Senders onChoose={this.OnSelectSender}/>
-                </div>
+               
+                <Senders onchoose={this.onselectsender}/>
+                
             </Modal.Body>
             <Modal.Footer>
               <Button variant='danger' onClick={this.props.onHide}>Close</Button>

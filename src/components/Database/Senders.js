@@ -12,7 +12,7 @@ class Senders extends Component {
     }
     componentDidMount(){
         this.refreshlist();
-        this.setState({isDirect: this.props.onChoose==null});
+        this.setState({isDirect: this.props.onchoose==null});
     }
     refreshlist(){
                 this.setState({senders:[
@@ -57,7 +57,7 @@ return (
                    <td>{sender.SenderAddress}</td>
                    <td hidden={this.state.isDirect}>
                        <button 
-                       onClick={()=>this.props.onChoose(sender)}>Select</button>
+                       onClick={()=>this.props.onchoose(sender)}>Select</button>
                    </td>
                    <td hidden={!this.state.isDirect}>
                    {/* <NavLink to="/Shipment" >Sipment</NavLink> */}
