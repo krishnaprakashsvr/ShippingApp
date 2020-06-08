@@ -15,7 +15,11 @@ class Sender extends Component {
   onSelectSender=(sender)=>{
     this.setState({addModalShow:false});
     this.setState({selectedSender:sender});
-    this.props.onChoose(sender);
+    
+    if(this.props.onChoose!=null)
+     { 
+      this.props.onChoose(sender);
+     }
   };
   
 render() {
