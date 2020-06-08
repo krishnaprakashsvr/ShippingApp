@@ -3,6 +3,7 @@ import Senders from '../Database/Senders';
 import {Modal,Button,Row,Col,Form,ButtonToolbar} from 'react-bootstrap';
 import '../../components/Shipment/Shipment.css';
 import {Header} from '../NavAndHeader/Header'
+import SendersModal from '../Database/SendersModal';
 
 class Sender extends Component {
     constructor(props){
@@ -13,9 +14,10 @@ class Sender extends Component {
     }
    
   onSelectSender=(sender)=>{
+    
     this.setState({addModalShow:false});
     this.setState({selectedSender:sender});
-    
+
     if(this.props.onChoose!=null)
      { 
       this.props.onChoose(sender);
@@ -37,7 +39,7 @@ render() {
           <Button onClick={()=>this.setState({addModalShow:true})}>          
                 ...
           </Button>
-          <Senders onSelect={this.onSelectSender} 
+          <SendersModal senderOnSelect={this.onSelectSender} 
             show={this.state.addModalShow} 
             onHide={addModalClose}/>
         </ButtonToolbar>
