@@ -8,11 +8,15 @@ import SendersModal from '../Database/SendersModal';
 class Sender extends Component {
     constructor(props){
       super(props);
-      console.log(props);
       this.state={addModalShow:false,
                   selectedSender:{}}
     }
-   
+   componentDidMount(){
+    if(this.props.seltdSender!=null)
+     {
+       this.setState({selectedSender:this.props.seltdSender})
+     }
+   }
   onSelectSender=(sender)=>{
     
     this.setState({addModalShow:false});
@@ -26,6 +30,7 @@ class Sender extends Component {
   
 render() {
   let addModalClose=()=>this.setState({addModalShow:false});
+   
   return (  
     <div className='sender-list'> 
     <div > <Header customStyle='Header-small'  name='Sender Details'/></div>

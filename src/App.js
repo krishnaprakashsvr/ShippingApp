@@ -21,6 +21,8 @@ class App extends Component {
        <Navigation/>
        <Switch>
          <Route path='/Shipment' component={Shipment} exact/>
+         {/* <Route path='/Shipment'  exact
+         render={(props) => <Shipment {...props} isAuthed={false} />}/> */}
          <Route path='/Senders' component={Senders} />
          <Route path='/Employee' component={Employee} />
          <Route path='/sender' component={Sender} />
