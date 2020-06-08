@@ -1,0 +1,15 @@
+.sender-list {
+    /* width: 85vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    background-color: rgb(200, 158, 240); */
+    margin:15px;
+    margin-bottom: 10px;
+    height: auto;
+    width: 350px;
+    background-color: rgb(200, 158, 240);
+    border-radius: 1mm;
+  }
+  

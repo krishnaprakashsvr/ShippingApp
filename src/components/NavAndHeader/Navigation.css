@@ -1,0 +1,11 @@
+.Navigation{
+    margin: 10px;
+    height: 45px;
+    width: auto;   
+    font-family: cursive;
+    border-radius: 2mm; 
+    padding: 10px ;
+    color: white;
+    background-color: blueviolet;
+    font-weight: bolder;
+}
