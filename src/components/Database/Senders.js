@@ -21,7 +21,21 @@ class Senders extends Component {
                         'SenderAddress':'Address1, Belgium,1002'},
                     {"SenderID":2,"SenderName":"TNT",
                         'SenderCompany':'TNT inc.', 'SenderContry':'U.S.A',
-                        'SenderAddress':'Ohio, USA,45622'}]});
+                        'SenderAddress':'Ohio, USA,45622'},
+                        {"SenderID":3,"SenderName":"BEID",
+                        'SenderCompany':'Belgium inc.', 'SenderContry':'BE',
+                        'SenderAddress':'Brussels, 1000'},
+
+                        {"SenderID":4,"SenderName":"FRID",
+                        'SenderCompany':'France inc.', 'SenderContry':'FR',
+                        'SenderAddress':'France, 2000'},
+                        {"SenderID":5,"SenderName":"GE",
+                        'SenderCompany':'Germany inc.', 'SenderContry':'GE',
+                        'SenderAddress':'Germany, 5000'},
+                        {"SenderID":6,"SenderName":"GB",
+                        'SenderCompany':'London inc.', 'SenderContry':'GB',
+                        'SenderAddress':'London, W1F'}
+                    ]});
                 }
     // createShipment=()=>{
     //     alert('sfd');

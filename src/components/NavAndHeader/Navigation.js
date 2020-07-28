@@ -16,6 +16,8 @@ render() {
                 <NavLink   className='Navigation'
                     to="/Senders" activeStyle={{ color:'orange' }}> Senders list</NavLink>
                 <NavLink   className='Navigation'
+                    to="/Recipients" activeStyle={{ color:'orange' }}> Recipient list</NavLink>
+                <NavLink   className='Navigation'
                     to="/Employee"   activeStyle={{ color:'orange' }}> Employee</NavLink>
                     <NavLink   className='Navigation'
                     to="/sender"   activeStyle={{ color:'orange' }}> Sender</NavLink>

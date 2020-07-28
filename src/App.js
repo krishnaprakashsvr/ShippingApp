@@ -5,6 +5,7 @@ import Navigation from './components/NavAndHeader/Navigation';
 import Shipment from './components/Shipment/Shipment';
 import './App.css';
 import Senders from './components/Database/Senders';
+import Recipients from './components/Database/Recipients';
 import Employee from './components/Database/Employee';
 import Sender from './components/Database/sender';
 
@@ -24,6 +25,7 @@ class App extends Component {
          {/* <Route path='/Shipment'  exact
          render={(props) => <Shipment {...props} isAuthed={false} />}/> */}
          <Route path='/Senders' component={Senders} />
+         <Route path='/Recipients' component={Recipients} />
          <Route path='/Employee' component={Employee} />
          <Route path='/sender' component={Sender} />
        </Switch>
