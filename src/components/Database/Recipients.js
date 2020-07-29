@@ -37,11 +37,19 @@ class Recipients extends Component {
                         'RecipientAddress':'London, W1F'}
                     ]});
                 }
-    // createShipment=()=>{
-    //     alert('sfd');
-    //     //return <Redirect to='/Shipment' />
-    //     return  <Route path='../Shipment/Shipment' component={Shipment} exact/>
-    // }
+    createShipment=(recip)=>{
+       const qString = 'id='+recip.RecipientID+
+                        '&name='+recip.RecipientName+
+                        '&comp='+recip.RecipientCompany+
+                        '&cnty='+recip.RecipientContry+
+                        '&add='+recip.RecipientAddress;
+       //this.props.history.push('/Shipment');
+       this.props.history.push({
+           pathname:'/Shipment',
+           search:'?'+qString
+       })
+        
+    }
     render() {
       //const lstSenders = this.props.lstSenders;
         
@@ -73,17 +81,17 @@ return (
                        <button 
                        onClick={()=>this.props.onchoose(recipient)}>Select</button>
                    </td>
-                   <td hidden={!this.state.isDirect}>
-                   {/* <NavLink to="/Shipment" >Sipment</NavLink> */}
+                   {/* <td hidden={!this.state.isDirect}>
+                  
                    <Link to={{pathname:'/Shipment',selectedRecipient:recipient}}>
                        Create Shipment
                    </Link>
-                    </td>
-                   {/* <td hidden={!this.state.isDirect}>
+                    </td> */}
+                   <td hidden={!this.state.isDirect}>
                        <button 
-                       onClick={this.createShipment}>Create Shipment</button>
+                       onClick={()=>this.createShipment(recipient)}>Create Shipment</button>
 
-                   </td> */}
+                   </td>
                </tr>
                )}
             </tbody>

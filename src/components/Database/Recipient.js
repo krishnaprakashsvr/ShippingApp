@@ -11,7 +11,7 @@ class Recipient extends Component {
       this.state={addModalShow:false,
                   selectedRecipient:{}}
     }
-   componentDidMount(){
+   componentDidMount(){ 
     if(this.props.seltdRecipient!=null)
      {
        this.setState({selectedRecipient:this.props.seltdRecipient})

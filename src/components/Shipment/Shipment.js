@@ -17,11 +17,20 @@ class Shipment extends Component {
   };
  
 render() {
+  const qString= new URLSearchParams(this.props.location.search);
+  const recip = {"RecipientID":qString.get('id'),
+  "RecipientName":qString.get('name'),
+  'RecipientCompany':qString.get('comp'), 
+  'RecipientContry':qString.get('cnty'),
+  'RecipientAddress':qString.get('add')};
+  
     return (  
       <div>
         <Sender seltdSender={this.props.location.selectedSender}
          onChoose={this.onselectsender}/>
-         <Recipient seltdRecipient={this.props.location.selectedRecipient}
+         {/* <Recipient seltdRecipient={this.props.location.selectedRecipient}
+         onChoose={this.onselectrecipient}/> */}
+          <Recipient seltdRecipient={recip}
          onChoose={this.onselectrecipient}/>
       </div>
 
