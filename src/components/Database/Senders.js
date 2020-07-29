@@ -63,7 +63,8 @@ return (
         </thead>
           <tbody>
             {this.state.senders.map(sender=>
-               <tr key={sender.SenderID}>
+               <tr key={sender.SenderID}
+               onDoubleClick={()=>this.props.onchoose(sender)}>
                    <td>{sender.SenderID}</td>
                    <td>{sender.SenderName}</td>
                    <td>{sender.SenderCompany}</td>

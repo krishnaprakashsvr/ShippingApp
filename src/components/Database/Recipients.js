@@ -71,7 +71,8 @@ return (
         </thead>
           <tbody>
             {this.state.recipients.map(recipient=>
-               <tr key={recipient.RecipientID}>
+               <tr key={recipient.RecipientID}
+               onDoubleClick={()=>this.props.onchoose(recipient)}>
                    <td>{recipient.RecipientID}</td>
                    <td>{recipient.RecipientName}</td>
                    <td>{recipient.RecipientCompany}</td>
